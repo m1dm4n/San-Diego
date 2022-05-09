@@ -7,6 +7,7 @@ Chúng ta được cung cấp 1 file OpenSSH private key bị phá hoại và nh
 ![image](https://user-images.githubusercontent.com/92845822/167399716-e59e7a95-e7b8-49f1-be85-9cb0cd7f7c9e.png)
 
 Sau khi decode toàn bộ base64 ra thì mình thấy đây là 1 file rsa key. Đây là link mình tham khảo để giải đươc câu này: [OpenSSH format](https://coolaj86.com/articles/openssh-vs-openssl-key-formats/)
+
 Format của 1 file RSA private key: 
 
 ![image](https://user-images.githubusercontent.com/92845822/167376189-7c72b22b-638f-4e7d-9ccd-a0e98ac31306.png)
@@ -80,7 +81,7 @@ Sử dụng thư viện PyCryptodome để tạo 1 file PEM từ các giá trị
 
 ![image](https://user-images.githubusercontent.com/92845822/167402665-9f8e46f2-89a6-4ee6-9556-ab6321d583f3.png)
 
-Chạy file [step2](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/step2.py) để tạo ra 1 file [private key](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/key.pem) dạng PEM rồi chạy lệnh bên dưới để bên dưới để lấy chuyển đổi sang file OpenSSH private key (-**C** để thêm comment 'SDCTF' vào file).
+Chạy file [step2](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/step2.py) để tạo ra 1 file [key.pem](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/key.pem) dạng PEM rồi chạy lệnh bên dưới để bên dưới để lấy chuyển đổi sang file OpenSSH private key (-**C** để thêm comment 'SDCTF' vào file).
 >puttygen -C SDCTF key.pem -O private-openssh-new -o newkey
 
 ![image](https://user-images.githubusercontent.com/92845822/167403631-4afbb923-bae4-4af0-bba3-6886c953cb23.png)
@@ -93,7 +94,7 @@ So sánh các bytes không bị ảnh hưởng bởi ta cũng thấy có 8 bytes
 
 ![image](https://user-images.githubusercontent.com/92845822/167412575-9122882d-00bd-4888-b284-175e894a5b61.png)
 
-Nên lúc này mình sẽ sao chép các bytes của file [id_rsa.corrupted]() và chỉ lấy các bytes bị mất từ file [newkey]() rồi chép vào 1 file mới sử dụng bằng đoạn code của file [ransomware.py]()
+Nên lúc này mình sẽ sao chép các bytes của file [id_rsa.corrupted](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/id_rsa.corrupted) và chỉ lấy các bytes bị mất từ file [newkey](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/newkey) rồi chép vào 1 file mới sử dụng bằng đoạn code của file [ransomware.py](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/ransomware.py)
 
 ![image](https://user-images.githubusercontent.com/92845822/167408675-c81b2cbe-2976-4a03-ae1a-bd2818df1324.png)
 
