@@ -1,7 +1,7 @@
 # San Diego CTF
 # Key Recovery - Crypto 250 - 39 solves
 
-[Write up]()
+[Write up](https://github.com/Tsouth113/San-Diego/tree/main/Key_recovery)
 
 # Internprise Encryption - Revenge 200 - 48 solves
 
@@ -9,7 +9,7 @@
 
 # Oracle - Revenge 130 - 64 solves
 
-[Write up](https://github.com/Tsouth113/San-Diego/tree/main/Key_recovery)
+[Write up](https://github.com/Tsouth113/San-Diego/tree/main/Oracle)
 
 # Vinegar - Crypto 100 - 193 solves
 Bài này là mã hóa Vigenere và ta không có key cũng như không thể dùng **Knowing plaintext attacks** nên sẽ bruteforce. Tool để bruteforce online:
