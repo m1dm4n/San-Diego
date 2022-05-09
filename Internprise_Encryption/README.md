@@ -45,7 +45,7 @@ function encrypt(s) {
 }
 ```
 
-Vì hàm này sẽ mã hóa từng kí tự của một chuỗi và được cộng với kí tự đứng trước vừa được mã hóa (nêú là kí tự đầu thì công với `0xd`) do đó ta có thể bruteforce từng kí tự. Bài này mình giải bằng python vì đọc file bằng javascript thì không ra đúng các kí tự trong file. Hàm mã hóa một kí tự bằng python:
+Vì hàm này sẽ mã hóa từng kí tự của một chuỗi và khi 1 kí tự mã hóa sẽ cộng với kí tự đứng trước vừa được mã hóa (nêú là kí tự đầu thì cộng với `0xd`) do đó ta có thể bruteforce từng kí tự. Bài này mình giải bằng python vì khi mình đọc file bằng javascript thì không ra đúng các kí tự trong file. Hàm mã hóa một kí tự bằng python:
 ```python showLineNumbers
 def encrypt(c, prevc, i):
     x = (c + i * 0xf) % 0x80
