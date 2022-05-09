@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/92845822/167410209-c5f6a18c-c9ea-4812-9273-5092fb48cfca.png)
 
-Chúng ta được cung cấp 1 file OpenSSH private key bị phá hoại và nhiệm vụ là phải phục hồi lại nguyên trạng. 
+Challenge này cung cấp 1 file OpenSSH private key bị xóa đi các bytes và ta cần phải phục hồi lại nguyên trạng ban đầu. 
 
 ![image](https://user-images.githubusercontent.com/92845822/167399716-e59e7a95-e7b8-49f1-be85-9cb0cd7f7c9e.png)
 
@@ -95,10 +95,9 @@ Bây giờ đã có giá trị **n** nên việc đầu tiên mình làm đó l�
 
 Và thật bất ngờ là nó có thiệt :). Có **p**, **q** rồi ta có thể tìm **phiN** từ đó tính **d**. Như vậy việc cần làm là tìm cách tạo được 1 file private key từ **n, e, d**
 
-![image](https://user-images.githubusercontent.com/92845822/167400154-8ebf8a14-22e5-4a70-950b-9b5cec837153.png)
 
 ## Phục hồi file ban đầu
-Sau khi tra Google một hồi mình không tìm ra cách dùng các giá trị khóa để tạo thành file OpenSSH private key tuy nhiên sau khi đọc 1 bài trên stackoverflow ([link](https://stackoverflow.com/questions/54994641/openssh-private-key-to-rsa-private-key)) thì mình tìm thấy 1 tool là [putty](https://github.com/github/putty) có thể convert được nên mình bật ubuntu chạy thử.
+Sau khi tra Google một hồi mình không tìm ra cách dùng các giá trị của khóa để tạo thành file OpenSSH private key nhưng sau khi đọc 1 bài trên stackoverflow ([link](https://stackoverflow.com/questions/54994641/openssh-private-key-to-rsa-private-key)) thì mình tìm thấy 1 tool là [putty](https://github.com/github/putty) có thể convert được nên mình bật ubuntu chạy thử.
 
 ![image](https://user-images.githubusercontent.com/92845822/167402050-aae828c2-5093-4756-9fe6-771883a5751f.png)
 
@@ -130,7 +129,7 @@ with open("key.pem", "wb") as f:
     f.write(key.export_key('PEM'))
 ```
 
-Chạy file [step2](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/step2.py) để tạo ra 1 file [key.pem](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/key.pem) dạng PEM rồi chạy lệnh bên dưới để bên dưới để lấy chuyển đổi sang file OpenSSH private key (-**C** để thêm comment 'SDCTF' vào file).
+Chạy file [step2](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/step2.py) để tạo ra 1 file [key.pem](https://github.com/Tsouth113/San-Diego/blob/main/Key_recovery/key.pem) dạng PEM rồi chạy lệnh bên dưới để chuyển đổi sang file OpenSSH private key (-**C** để thêm comment 'SDCTF' vào file).
 >puttygen -C SDCTF key.pem -O private-openssh-new -o newkey
 
 ![image](https://user-images.githubusercontent.com/92845822/167403631-4afbb923-bae4-4af0-bba3-6886c953cb23.png)
