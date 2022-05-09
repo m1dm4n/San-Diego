@@ -61,7 +61,7 @@ public class Oracle {
 Chương trình sẽ yêu cầu nhập vào 1 chuỗi string và sẽ bị mã hóa bằng 3 hàm `firstPass()`, `secondPass()`, `thirdPass()` rồi so sánh các giá trị đã mã hóa trước của flag trong mảng `CHECK`:
 
 1. Hàm `firstpart` sẽ được XOR trước sau đó cộng giá trị lên rồi ép kiểu về
-2. Hàm `secondPass()` sẽ dịch toàn bộ các bit sang phải 4 bit. Ví dụ: mảng byte có 3 phần tử `{123, -120, -50}` sẽ được biễu diễn như sau `{01111011, 10001000, 11001110}` (lưu ý là số âm sẽ biễu diễn dưới dạng bù 2) => `{11100111, 10111000, 10001100}` 
+2. Hàm `secondPass()` sẽ dịch toàn bộ các bit sang phải 4 bit. Ví dụ: mảng byte có 3 phần tử `{123, -120, -50}` sẽ được biễu diễn như sau `{01111011, 10001000, 11001110}` (lưu ý là số âm sẽ biễu diễn dưới dạng bù 2), mảng sau khi chạy hàm: `{11100111, 10111000, 10001100}` 
 3. Hàm `thirdPass()` cũng cộng giá trị lên rồi ép kiểu về
 
 Code để lấy flag của mình:

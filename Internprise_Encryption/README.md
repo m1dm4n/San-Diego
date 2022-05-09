@@ -1,7 +1,7 @@
 # Internprise Encryption - Revenge 200 - 48 solves
 ![image](https://user-images.githubusercontent.com/92845822/167444952-347ecaa6-6e0b-47ba-8e63-1ef9ee7252f9.png)
 
-Challenge này ta sẽ đươc cung câp 1 file zip chứa các file bị mã hóa và hàm mã háo được viết bằng **javascript**
+Challenge này ta sẽ được cung câp 1 file zip chứa các file bị mã hóa và hàm mã hóa được viết bằng **javascript**
 
 ```javascript showLineNumbers
 function encrypt(s) {
@@ -57,7 +57,7 @@ def encrypt(c, prevc, i):
     return x
 ``` 
 
-Nếu kết quả trả về bằng với kí tự đã bị mã hóa đó là kí tự ta cần tìm (để tránh trường hợp có nhiều kết quả mình sẽ chỉ mã hóa các kí tự trong `string.printable`). Code để lấy flag của mình:
+Nếu kết quả trả về bằng với kí tự đã bị mã hóa ở vị trí đó trong **flag.txt** thì đó là kí tự ta cần tìm (để tránh trường hợp có nhiều kết quả mình sẽ chỉ mã hóa các kí tự trong `string.printable`). Code để lấy flag của mình:
 ```python showLineNumbers
 import string
 
