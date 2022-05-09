@@ -9,10 +9,9 @@ keydata = base64.b64decode(
 parts = []
 while keydata:
     # read the length of the data
-    dlen = struct.unpack('>I', keydata[:4])[0]
+    l = struct.unpack('>I', keydata[:4])[0]
 
-    # read in <length> bytes
-    data, keydata = keydata[4:dlen+4], keydata[4+dlen:]
+    data, keydata = keydata[4:l+4], keydata[4+l:]
 
     parts.append(data)
 print(parts)
