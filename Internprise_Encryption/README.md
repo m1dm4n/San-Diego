@@ -1,4 +1,6 @@
 # Internprise Encryption - Revenge 200 - 48 solves
+![image](https://user-images.githubusercontent.com/92845822/167444952-347ecaa6-6e0b-47ba-8e63-1ef9ee7252f9.png)
+
 Challenge này ta sẽ đươc cung câp 1 file zip chứa các file bị mã hóa và hàm mã háo được viết bằng **javascript**
 
 ```javascript showLineNumbers

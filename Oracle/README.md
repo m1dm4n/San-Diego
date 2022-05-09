@@ -1,4 +1,6 @@
 # Oracle - Revenge 130 - 64 solves
+![image](https://user-images.githubusercontent.com/92845822/167444726-c5552243-c81e-483d-89f6-7765edccf957.png)
+
 Challenge này cung cấp 1 file bytecode. Dùng tool [jd-gui](https://github.com/java-decompiler/jd-gui) ta dễ dàng có được source code
 
 ```java
