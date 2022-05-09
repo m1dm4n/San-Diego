@@ -16,7 +16,7 @@ def test(n, e, d):
     return pt == p
 
 
-print(test(n, e, d))
+assert test(n, e, d)
 
 key = RSA.construct([n, e, d])
 with open("key.pem", "wb") as f:
