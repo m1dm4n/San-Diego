@@ -86,18 +86,19 @@ for i in range(len(buffer)):
 print(pt)
 ```
 File flag.txt:
-> From: jared@business.biz 
-> To: dave@business.biz
-> Subject: Fortune Telling Shenanigans
-> Content-Type: text/html
-> MIME-Version: 1.0
-
-> Hey Dave,
-> I went to a fortune teller the other day and while she divined my future, she mentioned you, strangely enough.
-> I don't know why you came up if it was *my%#fortune that was being read, but she said something about "your coworker Dave" and a "grave mistake," but I didn't read too much into it. She told me to send you this though:
->         sdctf{D0n't_b3_a_D4v3_ju5t_Use_AES_0r_S0me7h1ng}
-> I'm not sure why she wanted you to know this gibberish. I can't seem to make heads or tails of it.
-> Anyways are you coming to the company picnic this Saturday? I heard Carol from HR is bringing some of her world-famous
-> deviled eggs.
-> Best,
-> Jared from Accounting
+> From: jared@business.biz <br/>
+> To: dave@business.biz<br/>
+> Subject: Fortune Telling Shenanigans<br/>
+> Content-Type: text/html<br/>
+> MIME-Version: 1.0<br/>
+><br/>
+> Hey Dave,<br/>
+> I went to a fortune teller the other day and while she divined my future, she mentioned you, strangely enough.<br/>
+> I don't know why you came up if it was *my%#fortune that was being read, but she said something about "your coworker Dave" and a "grave mistake," but I didn't read too much into it. She told me to send you this though:<br/>
+>         sdctf{D0n't_b3_a_D4v3_ju5t_Use_AES_0r_S0me7h1ng}<br/>
+> I'm not sure why she wanted you to know this gibberish. I can't seem to make heads or tails of it.<br/>
+> Anyways are you coming to the company picnic this Saturday? I heard Carol from HR is bringing some of her world-famous<br/>
+> deviled eggs.<br/>
+> <br/>
+> Best, <br/>
+> Jared from Accounting <br/>
